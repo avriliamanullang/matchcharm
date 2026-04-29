@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>match.charm</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff0f6;
+      margin: 0;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      color: #e91e63;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(233,30,99,0.2);
+    }
+
+    nav {
+  background: #333;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+nav a {
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #ff7eb3;
+}
+
+    .container {
+      width: 85%;
+      margin: 40px auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #e91e63;
+    }
+
+    .kategori {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+
+    .card {
+      background: #ffffff;
+      width: 220px;
+      padding: 15px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(233,30,99,0.15);
+      border: 1px solid #ffd1e3;
+      transition: 0.3s;
+    }
+
+    .produk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 25px rgba(233,30,99,0.25);
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      background: #f06292;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #ec407a;
+    }
+
+    .cart-box {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 6px 15px rgba(233,30,99,0.15);
+      border: 1px solid #ffd1e3;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      border-bottom: 1px dashed #f8bbd0;
+      padding-bottom: 5px;
+    }
+
+    .hapus {
+      background: #e57373;
+      border: none;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .checkout {
+      background: #e91e63;
+      margin-top: 20px;
+      border-radius: 25px;
+    }
+
+    .total {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+<div class="nav-links">
+  <a href="home.html">Home</a>
+  <a href="beranda.html">Beranda</a>
+  <a href="about.html">About</a>
+  <a href="product.html">Product</a>
+  <a href="reservasi.html">Reservasi</a>
+  <a href="review.html">Review</a>
+</div>
+</nav>
+
+<header>
+  💗 match.charm
+  <div>🛒 Keranjang: <span id="count">0</span></div>
+</header>
+
+<div class="container">
+
+  <h2>Produk Charm</h2>
+
+  <div class="produk-grid">
+
+    <!-- PRODUK -->
+    <div class="card"><img src="img/charm1.jpeg"><p>Rp15000</p><button onclick="tambah('Charm 1 - Rp15000')">Tambah</button></div>
+    <div class="card"><img src="img/charm2.jpeg"><p>Rp18000</p><button onclick="tambah('Charm 2 - Rp18000')">Tambah</button></div>
+    <div class="card"><img src="img/charm3.jpeg"><p>Rp17000</p><button onclick="tambah('Charm 3 - Rp17000')">Tambah</button></div>
+    <div class="card"><img src="img/charm4.jpeg"><p>Rp20000</p><button onclick="tambah('Charm 4 - Rp20000')">Tambah</button></div>
+    <div class="card"><img src="img/charm5.jpeg"><p>Rp22000</p><button onclick="tambah('Charm 5 - Rp22000')">Tambah</button></div>
+    <div class="card"><img src="img/charm6.jpeg"><p>Rp16000</p><button onclick="tambah('Charm 6 - Rp16000')">Tambah</button></div>
+    <div class="card"><img src="img/charm7.jpeg"><p>Rp19000</p><button onclick="tambah('Charm 7 - Rp19000')">Tambah</button></div>
+    <div class="card"><img src="img/charm8.jpeg"><p>Rp15000</p><button onclick="tambah('Charm 8 - Rp15000')">Tambah</button></div>
+    <div class="card"><img src="img/charm9.jpeg"><p>Rp21000</p><button onclick="tambah('Charm 9 - Rp21000')">Tambah</button></div>
+    <div class="card"><img src="img/charm10.jpeg"><p>Rp17000</p><button onclick="tambah('Charm 10 - Rp17000')">Tambah</button></div>
+    <div class="card"><img src="img/charm11.jpeg"><p>Rp16000</p><button onclick="tambah('Charm 11 - Rp16000')">Tambah</button></div>
+    <div class="card"><img src="img/charm12.jpeg"><p>Rp18000</p><button onclick="tambah('Charm 12 - Rp18000')">Tambah</button></div>
+    <div class="card"><img src="img/charm13.jpeg"><p>Rp25000</p><button onclick="tambah('Charm 13 - Rp25000')">Tambah</button></div>
+    <div class="card"><img src="img/charm14.jpeg"><p>Rp23000</p><button onclick="tambah('Charm 14 - Rp23000')">Tambah</button></div>
+    <div class="card"><img src="img/charm15.jpeg"><p>Rp19000</p><button onclick="tambah('Charm 15 - Rp19000')">Tambah</button></div>
+
+  </div>
+
+  <!-- KERANJANG -->
+  <div class="cart-box">
+    <h3>Keranjang</h3>
+    <ul id="cartList"></ul>
+    <div class="total">Total: <span id="total">Rp0</span></div>
+    <button class="checkout" onclick="checkoutWA()">Checkout WhatsApp</button>
+  </div>
+
+</div>
+
+<script>
+let cart = [];
+
+function tambah(item) {
+  cart.push(item);
+  renderCart();
+}
+
+function hapus(index) {
+  cart.splice(index, 1);
+  renderCart();
+}
+
+function renderCart() {
+  let list = document.getElementById("cartList");
+  let total = 0;
+
+  list.innerHTML = "";
+
+  cart.forEach((item, index) => {
+
+    // ambil angka dari "Rp15000"
+    let harga = parseInt(item.split("Rp")[1]);
+    total += harga;
+
+    let li = document.createElement("li");
+    li.innerHTML = `
+      ${item}
+      <button class="hapus" onclick="hapus(${index})">X</button>
+    `;
+    list.appendChild(li);
+  });
+
+  document.getElementById("count").innerText = cart.length;
+  document.getElementById("total").innerText = "Rp" + total.toLocaleString();
+}
+
+function checkoutWA() {
+  if (cart.length === 0) {
+    alert("Keranjang kosong");
+    return;
+  }
+
+  let pesan = "Halo match.charm, saya pesan:%0A";
+  let total = 0;
+
+  cart.forEach((item, i) => {
+    let harga = parseInt(item.split("Rp")[1]);
+    total += harga;
+
+    pesan += `${i+1}. ${item}%0A`;
+  });
+
+  pesan += `%0ATotal: Rp${total.toLocaleString()}`;
+
+  window.open(`https://wa.me/6282286814194?text=${pesan}`);
+}
+</script>
+
+</body>
+</html>
