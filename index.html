@@ -1,148 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Website</title>
+  <meta charset="UTF-8">
+  <title>Sign In - Match Charm</title>
+  <style>
+    body {
+      font-family: "Comic Sans MS", cursive;
+      background: linear-gradient(135deg, #ffd6e8, #fff1c1);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    .box {
+      background: #fff;
+      padding: 32px;
+      border-radius: 18px;
+      width: 340px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(255, 127, 191, 0.3);
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: #f4f4f4;
-}
+    img {
+      width: 130px;
+      margin-bottom: 12px;
+    }
 
-nav {
-  background: #333;
-  padding: 15px;
-  text-align: center;
-}
+    h2 {
+      color: #ff4fa0;
+      margin-bottom: 5px;
+    }
 
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .subtitle {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 15px;
+    }
 
-nav a:hover {
-  color: #ff7eb3;
-}
+    input {
+      width: 100%;
+      padding: 11px;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: 1px solid #ffc1dd;
+      outline: none;
+      font-size: 14px;
+    }
 
-.main-content {
-  flex: 1;
-  padding: 60px;
-  text-align: center;
-}
+    input:focus {
+      border-color: #ff7fbf;
+    }
 
-.main-content h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 18px;
+      background: #ff7fbf;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
 
-.main-content p {
-  color: #555;
-  font-size: 18px;
-}
+    button:hover {
+      background: #ff5fa9;
+    }
 
-footer {
-  background: linear-gradient(45deg, #ff7eb3, #ff758c);
-  color: white;
-  padding: 30px;
-}
+    .link {
+      margin-top: 15px;
+      font-size: 14px;
+    }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.footer-content div {
-  flex: 1;
-  margin: 10px;
-  min-width: 200px;
-}
-
-.footer-content h4 {
-  margin-bottom: 15px;
-}
-
-.footer-links ul {
-  list-style: none;
-}
-
-.footer-links li {
-  margin-bottom: 8px;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.copyright {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
-}
-</style>
-
+    a {
+      color: #ff4fa0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-<nav>
-<div class="nav-links">
-  <a href="home.html">Home</a>
-  <a href="beranda.html">Beranda</a>
-  <a href="about.html">About</a>
-  <a href="product.html">Product</a>
-  <a href="reservasi.html">Reservasi</a>
-  <a href="review.html">Review</a>
-</div>
-</nav>
+<div class="box">
+  <img src="logo2.jpeg" alt="Match Charm Logo">
+  <h2>Join Match Charm 💖</h2>
+  <div class="subtitle">Daftar dulu yuk, biar bisa mulai cari charm favoritmu ✨</div>
 
-<div class="main-content">
-  <h1>Welcome to My Website</h1>
-  <p>This is a simple website with navbar and footer.</p>
-</div>
+  <input type="text" id="username" placeholder="Username lucu kamu 🐰">
+  <input type="password" id="password" placeholder="Password rahasia 🤫">
 
-<footer>
-  <div class="footer-content">
+  <button onclick="register()">Daftar Sekarang 🌸</button>
 
-    <div>
-      <h4>Contact Us</h4>
-      <p>Email: info@example.com</p>
-      <p>Phone: +1 (555) 123-4567</p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="terms.html">Terms of Service</a></li>
-      </ul>
-    </div>
-
+  <div class="link">
+    Sudah punya akun?
+    <a href="index.html">Login di sini 💕</a>
   </div>
+</div>
 
-  <div class="copyright">
-    <p>&copy; 2026 Your Company Name. All rights reserved.</p>
-  </div>
-</footer>
+<script>
+  function register() {
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+
+    if (user === "" || pass === "") {
+      alert("Isi dulu yaa~ jangan ada yang kosong 🥺");
+      return;
+    }
+
+    localStorage.setItem("username", user);
+    localStorage.setItem("password", pass);
+
+    alert("Yay! Akun kamu berhasil dibuat 💖");
+    window.location.href = "home.html";
+  }
+</script>
 
 </body>
 </html>
