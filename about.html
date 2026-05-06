@@ -1,178 +1,225 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Homepage Toko Gelang</title>
+    <meta charset="UTF-8">
 
+    <!-- WAJIB biar responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    <title>About Us - Match Charm</title>
 
-<style>
-body{
-    font-family:'Baloo 2', cursive;
-    margin:0;
-    background:#fff0f6;
+    <style>
+        .nav-atas {
+            background: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .nav-links a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #ff69b4;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #ffe4ec;
+        }
+
+        .about-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .brand-name {
+            font-size: 24px;
+            color: #ff6f91;
+        }
+
+        .about-title {
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .about-title {
+            display: flex;
+            align-items: center; /* Menjajarkan teks dan ikon agar pas di tengah */
+            gap: 15px; /* Jarak antara teks dan ikon love */
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 3rem;
+            color: #000000;
+        }
+
+        .love-icon {
+            font-size: 2.2rem; /* Ukuran love disesuaikan agar proporsional dengan font besar */
+            color: #ff6b8b; /* Warna pink senada dengan gambar */
+            display: inline-flex;
+        }
+        
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap; /* penting buat HP */
+        }
+
+        .image-box img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 25px;
+            box-shadow: 0 15px 30px rgba(255, 111, 145, 0.3);
+            border: 5px solid #fff;
+        }
+
+        .text-box {
+            max-width: 450px;
+            text-align: left;
+        }
+
+        .text-box h3 {
+            color: #ff6f91;
+            margin-bottom: 5px;
+        }
+
+        .text-box p {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-title {
+  display: flex;
+  align-items: center; /* Menjajarkan teks dan ikon love agar tetap di tengah */
+  justify-content: center;
+  gap: 15px; 
+  
+  /* Menggunakan font Fredoka yang lucu dan tebal */
+  font-family: 'Fredoka', cursive; 
+  font-weight: 700;
+  font-size: 3.5rem; /* Ukuran bisa disesuaikan */
+  
+  /* Gradasi warna atau warna pink pastel yang manis */
+  color: #1a1a1a; 
 }
 
-nav {
-  background: #333;
-  padding: 10px;
-  text-align: center;
-  width: 100%;
-  position: relative;
-  left: 0;
-  top: 0;
+/* Mengatur ukuran love agar proporsional dengan font yang baru */
+.love-icon {
+  font-size: 2.5rem; 
+  color: #ff6b8b; 
 }
+        .description-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: #d84b72; /* Warna merah muda khas Match Charm */
+        }
+        .footer-text {
+            margin-top: 40px;
+            padding: 15px;
+            background: #fff0f5;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 14px;
+        }
 
-nav a {
-  color: white;
-  margin: 0 20px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-}
+        .highlight {
+            color: #ff6f91;
+            font-weight: bold;
+        }
 
-nav a:hover {
-  color: #ff7eb3;
-}
-.navbar{
-    background:#ff7eb3;
-    color:white;
-    padding:15px;
-    display:flex;
-    justify-content:space-between;
-}
+        /* 🔥 KHUSUS HP */
+        @media (max-width: 768px) {
+            .about-title {
+                font-size: 28px;
+            }
 
-.navbar b{
-    font-family:'Fredoka', sans-serif;
-    font-size:24px;
-}
+            .brand-name {
+                font-size: 20px;
+            }
 
-.navbar a{
-    color:white;
-    margin-left:15px;
-    text-decoration:none;
-    font-weight:600;
-}
+            .text-box {
+                text-align: center;
+            }
 
-
-.hero{
-    text-align:center;
-    padding:70px 20px;
-    background: #ff7eb3;
-}
-
-.hero h1{
-    font-family:'Fredoka', sans-serif;
-    font-size:36px;
-}
-
-
-.container{
-    width:90%;
-    margin:auto;
-    padding:40px 0;
-}
-
-h2{
-    font-family:'Fredoka', sans-serif;
-}
-
-
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    border-radius:15px;
-    padding:15px;
-    text-align:center;
-    box-shadow:0 5px 12px rgba(0,0,0,0.1);
-}
-
-.card img{
-    width:100%;
-    border-radius:12px;
-}
-
-.card h4{
-    font-family:'Fredoka', sans-serif;
-    margin:10px 0 5px;
-}
-
-
-.footer{
-    background:#CE6E75;
-    color:white;
-    text-align:center;
-    padding:15px;
-}
-</style>
-
+            .text-box p {
+                font-size: 13px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<nav>
-<div class="nav-links">
-  <a href="index.html">Login</a>
-  <a href="home.html">Home</a>
-  <a href="beranda.html">Beranda</a>
-  <a href="about.html">About</a>
-  <a href="product.html">Product</a>
-  <a href="reservasi.html">Reservasi</a>
-  <a href="review.html">Review</a>
-</div>
-</nav>
+    <nav class="nav-atas">
+        <div class="nav-links">
+            <a href="index.html">Login</a>
+            <a href="home.html">Home</a>
+            <a href="collection.html">Collection</a>
+            <a href="about.html">About</a>
+            <a href="product.html">Product</a>
+            <a href="reservasi.html">Reservasi</a>
+            <a href="review.html">Review</a>
+            </div>
+    </nav>
 
-<div class="hero">
 
-<div><h1 class="brand-title">GelangGemes</h1></div>  
-<h1>
-Koleksi Gelang Lucu & Gemes
-</h1>
+<section class="about-section">
+    <div class="brand-name">✨ Match Charm 🎀</div>
+    <div class="about-container">
+      <h1 class="about-title">
+        <span class="love-icon left-love">🩷</span>
+        About Us
+        <span class="love-icon right-love">🩷</span>
+      </h1>
+    </div>
+   
 
-<p>Charm cantik yang bikin penampilan makin manis setiap hari ✨</p>
+    <div class="container">
 
-</div>
+        <!-- Gambar -->
+        <div class="image-box">
+            <img src="manik.jpg" alt="bracelet">
+        </div>
 
-<div class="container">
-<h2>Koleksi Produk</h2>
+        <!-- Text -->
+        <div class="text-box">
+            <h3>Who We Are</h3>
+            <p>Match Charm is a handmade accessory brand that brings a collection of cute and charming bracelets to brighten your everyday look.</p>
 
-<div class="products">
+            <h3>Our Story</h3>
+            <p>It all started from a love for tiny, pretty things. Match Charm was created to share happiness through little accessories.</p>
 
-<div class="card">
-<img src="charm1,15k.jpg">
-<h4>Gelang Flower Cute</h4>
-<p>Desain imut dan manis banget 💕</p>
-</div>
+            <h3>Our Value</h3>
+            <p>We focus on quality, creativity, and handmade details in every product.</p>
 
-<div class="card">
-<img src="manik.jpg">
-<h4>Gelang Manik </h4>
-<p>Warna cerah & playful 🍭</p>
-</div>
+            <h3>Our Goal</h3>
+            <p>To become your go-to accessory brand that adds a touch of cuteness and confidence.</p>
+        </div>
 
-<div class="card">
-<img src="cincin5k.jpg">
-<h4>Cincin Manik</h4>
-<p>Gaya cute ala korean 🦋</p>
-</div>
+    </div>
 
-<div class="card">
-<img src="charm10k.jpg">
-<h4>Bag Charm Cute</h4>
-<p>Simple tapi gemes banget ✨</p>
-</div>
-
-</div>
-</div>
-
-<div class="footer">
-<p>© 2026 GelangGemes 💖</p>
-</div>
+    <div class="footer-text">
+        At Match Charm, we believe that 
+        <span class="highlight">small accessories can make your day feel more magical and adorable</span> ✨
+    </div>
+</section>
 
 </body>
 </html>

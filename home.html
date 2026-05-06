@@ -1,149 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Website</title>
+<title>Match Charm</title>
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+     color: #ff69b4;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: #f4f4f4;
+    background: #ffe4ec;
 }
 
-nav {
-  background: #333;
-  padding: 15px;
-  text-align: center;
+/* NAVBAR */
+.navbar {
+    background: #333;
+    padding: 15px;
+    text-align: center;
 }
 
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
+.navbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
 }
 
-nav a:hover {
-  color: #ff7eb3;
+/* HOME */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-.main-content {
-  flex: 1;
-  padding: 60px;
-  text-align: center;
+.home-text {
+    max-width: 400px;
 }
 
-.main-content h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
+.home-text h1 {
+    font-size: 40px;
 }
 
-.main-content p {
-  color: #555;
-  font-size: 18px;
+.home-text span {
+    color: #ff6f91;
 }
 
-footer {
-  background: linear-gradient(45deg, #ff7eb3, #ff758c);
-  color: white;
-  padding: 30px;
+.home-text p {
+    margin: 15px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff6f91;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #f8cfd6;
+    padding: 30px 20px;
+    font-family: sans-serif;
+}
+
+.footer-top {
+    background-color: #f6dbe0;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-top p {
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+.footer-top span {
+    font-size: 14px;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.footer-content div {
-  flex: 1;
-  margin: 10px;
-  min-width: 200px;
+.contact, .links, .brand {
+    flex: 1;
+    min-width: 200px;
 }
 
-.footer-content h4 {
-  margin-bottom: 15px;
+.links .link-grid {
+    display: flex;
+    gap: 40px;
 }
 
-.footer-links ul {
-  list-style: none;
+.brand h2 {
+    color: #ff69b4;
 }
 
-.footer-links li {
-  margin-bottom: 8px;
+.footer p {
+    margin: 5px 0;
 }
 
-.footer-links a {
-  color: white;
-  text-decoration: none;
+copyright {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.footer-links a:hover {
-  text-decoration: underline;
+/* IMAGE */
+.home img {
+    width: 300px;
+    border-radius: 20px;
 }
 
-.copyright {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
+/* FEATURES */
+/* Container Utama */
+.main-container {
+    background-color: #fffafb; /* Pink sangat muda */
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Fredoka', cursive;
+    color: #5c3d2e;
+    margin-bottom: 30px;
+}
+
+/* Mengatur Baris Kartu agar sejajar ke samping */
+.features-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: #fff;
+    border: 1px solid #ffe5ec;
+    border-radius: 20px;
+    padding: 30px 20px;
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.2);
+}
+
+.icon-circle {
+    background-color: #fff0f3;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    font-size: 1.5rem;
+    border: 2px dashed #ffb3c1;
+}
+
+.feature-card h3 {
+    font-size: 1.1rem;
+    color: #d84b72;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* Banner Tengah */
+.banner-promo {
+    background-color: #ffe5ec;
+    border-radius: 50px;
+    padding: 15px 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.banner-text strong {
+    color: #d84b72;
+}
+
+/* Footer Pink di paling bawah */
+.footer-bottom {
+    background-color: #ffc2d1; /* Warna pink footer */
+    border-radius: 20px 20px 0 0;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.footer-section p, .links-grid span {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 30px;
+}
+
+.logo-text {
+    font-family: 'Fredoka', cursive;
+    color: #d84b72;
+    font-size: 2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .home-text h1 {
+        font-size: 28px;
+    }
+
+    .home img {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 </style>
-
 </head>
+
 <body>
 
-<nav>
-<div class="nav-links">
-  <a href="index.html">Login</a>
-  <a href="home.html">Home</a>
-  <a href="beranda.html">Beranda</a>
-  <a href="about.html">About</a>
-  <a href="product.html">Product</a>
-  <a href="reservasi.html">Reservasi</a>
-  <a href="review.html">Review</a>
-</div>
-</nav>
-
-<div class="main-content">
-  <h1>Welcome to My Charm</h1>
-  <p>Find Your Charm!</p>
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="index.html">Login</a>
+            <a href="home.html">Home</a>
+            <a href="collection.html">Collection</a>
+            <a href="about.html">About</a>
+            <a href="product.html">Product</a>
+            <a href="reservasi.html">Reservasi</a>
+            <a href="review.html">Review</a>
 </div>
 
-<footer>
-  <div class="footer-content">
-
-    <div>
-      <h4>Contact Us</h4>
-      <p>Email: matchcharm0@gmail.com</p>
-      <p>Phone: +62 83134203494</p>
+<!-- HOME -->
+<section class="home">
+    <div class="home-text">
+        <h1>Find Your <span>Cute Charm</span> ✨</h1>
+        <p>Handmade accessories to brighten your everyday style 💖</p>
+        <a href="product.html" class="btn">Shop Now</a>
     </div>
 
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="terms.html">Terms of Service</a></li>
-      </ul>
+    <img src="manik.jpg" alt="">
+</section>
+
+<div class="main-container">
+    
+    <h2 class="section-title">Why Choose Match Charm? 🩷</h2>
+
+    <div class="features-row">
+        <div class="feature-card">
+            <div class="icon-circle">❤️</div>
+            <h3>Handmade with Love</h3>
+            <p>Every piece is carefully made by hand</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon-circle">🎀</div>
+            <h3>Cute & Unique Design</h3>
+            <p>Adorable designs that make your style stand out</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon-circle">🎁</div>
+            <h3>Perfect for Every Moment</h3>
+            <p>Great for gifts or to treat yourself</p>
+        </div>
     </div>
 
-  </div>
+    <div class="banner-promo">
+        <span class="ribbon-icon">🎀</span>
+        <div class="banner-text">
+            <strong>Small accessories can make a big difference ✨</strong>
+            <p>Thank you for supporting Match Charm 🩷</p>
+        </div>
+    </div>
 
-  <div class="copyright">
-    <p>&copy; 2026 Match Charm. All rights reserved.</p>
-  </div>
-</footer>
+    <footer class="footer-bottom">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: matchcharm@gmail.com</p>
+                <p>Phone: +62 81314203444</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <div class="links-grid">
+                    <span>Home</span>
+                    <span>About Us</span>
+                    <span>Collection</span>
+                    <span>Reservasi</span>
+                    <span>Product</span>
+                    <span>Review</span>
+                </div>
+            </div>
+            <div class="footer-logo-section">
+                <h2 class="logo-text">Match Charm 🎀</h2>
+            </div>
+        </div>
+    </footer>
+</div>
 
 </body>
 </html>
